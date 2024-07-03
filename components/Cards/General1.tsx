@@ -8,6 +8,13 @@ import { ResponsiveBump } from "@nivo/bump";
 // no chart will be rendered.
 // website examples showcase many properties,
 // you'll often use just a few of them.
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 const MyResponsiveBump = (props: any) => {
   return (
     <ResponsiveBump
@@ -358,8 +365,14 @@ export default function General1() {
     },
   ];
   return (
-    <div className="w-full h-[400px]">
-      <MyResponsiveBump data={data} />
-    </div>
+    <Card className="w-full">
+      <CardHeader>
+        <CardTitle>This week</CardTitle>
+        <CardDescription>These are the results this week</CardDescription>
+      </CardHeader>
+      <CardContent className="grid gap-4 h-[400px]">
+        <MyResponsiveBump data={data} />
+      </CardContent>
+    </Card>
   );
 }
