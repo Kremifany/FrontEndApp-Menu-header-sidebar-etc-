@@ -1,10 +1,10 @@
-import { Button } from "@/components/ui/button";
+// import General from "@/components/Cards/General";
+import General1 from "@/components/Cards/General1";
 
 export default function Home() {
   return (
-    <div className="p-4">
-      Home Page
-      <Button variant="outline">Button</Button>
+    <div>
+      <General1 />
     </div>
   );
 }
