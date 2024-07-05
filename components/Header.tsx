@@ -2,7 +2,7 @@
 
 import { Bell } from "lucide-react";
 import { CommandDemo } from "./Command";
-import { Button } from "./ui/button";
+// import { Button } from "./ui/button";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -32,7 +32,7 @@ export default function Header() {
       <div className="flex items-center justify-end">
         <DropdownMenu>
           <DropdownMenuTrigger>
-            <Button className="relative" variant="outline" size="icon">
+            {/* <Button className="relative" variant="outline" size="icon">
               <div
                 className={`absolute -top-2 -right-1 h-3 w-3 rounded-full my-1 ${
                   notifications.find((x: any) => x.read === true)
@@ -41,7 +41,7 @@ export default function Header() {
                 } `}
               ></div>
               <Bell className="h-4 w-4" />
-            </Button>
+            </Button> */}
           </DropdownMenuTrigger>
           <DropdownMenuContent align="end">
             {notifications.map((item: any, key: number) => (
