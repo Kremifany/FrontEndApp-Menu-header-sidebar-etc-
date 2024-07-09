@@ -1,0 +1,36 @@
+{
+	"Add new day": {
+		"scope": "md,markdown",
+		"prefix": "nday",
+		"body": [
+			"# Daily tasks",
+			"",
+			"## $1",
+			"",
+			"Duration: $2",
+			"Status: ToDo",
+			"",
+		],
+		"description": "Creates new day"
+	},
+	"Add new task": {
+		"scope": "md,markdown",
+		"prefix": "ntask",
+		"body": [
+			"## $1",
+			"",
+			"Duration: $2",
+			"Status: $3",
+			"",
+			"Details:",
+			"",
+			"- ",
+			"",
+			"Next steps:",
+			"",
+			"- ",
+			"",
+		],
+		"description": "Creates new task"
+	}
+}

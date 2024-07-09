@@ -1,5 +1,7 @@
 "use client";
-import UserItem from "./UserItem";
+
+import UserItem from "useritem";
+// import UserItem from "./UserItem";
 import {
   Command,
   CommandEmpty,
@@ -19,6 +21,8 @@ import {
   User,
   icons,
 } from "lucide-react";
+import Link from "next/link";
+import { title } from "process";
 export default function Sidebar() {
   const menuList = [
     {
@@ -71,7 +75,14 @@ export default function Sidebar() {
   return (
     <div className="fixed flex flex-col gap-4 w-[300px] min-w-[300px] p-4 min-h-screen">
       <div>
-        <UserItem />
+        {/* <UserItem /> */}
+        <UserItem
+          title="Jon Doe"
+          description="johnde@gmail.com"
+          shadow="false"
+          style="{{border: '1px solid red'}}"
+          onClick={(e) => console.log(`User item clicked!`, e)}
+        />
       </div>
       <div className="grow">
         <Command style={{ overflow: "visible" }}>
@@ -91,6 +102,12 @@ export default function Sidebar() {
             ))}
           </CommandList>
         </Command>
+      </div>
+      <div>
+        <Link href="/team" className="flex items-center gap-2">
+          <Settings />
+          <span>Team settings</span>
+        </Link>
       </div>
     </div>
   );
